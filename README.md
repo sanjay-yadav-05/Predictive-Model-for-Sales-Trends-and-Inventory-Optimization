@@ -4,6 +4,16 @@ This project is designed to help vendors optimize their inventory by analyzing s
 
 ---
 
+## 📊 Dataset
+
+The model is trained on real-world inventory and sales data from Kaggle:
+
+**🔗 [Inventory Analysis Case Study – Bhanu Pratap Biswas](https://www.kaggle.com/datasets/bhanupratapbiswas/inventory-analysis-case-study)**
+
+This dataset includes product-level details, sales figures, and inventory movement useful for building data-driven inventory optimization solutions.
+
+---
+
 ## 🚀 Getting Started
 
 ### 📦 Prerequisites
