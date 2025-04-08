@@ -1,0 +1,6 @@
+InventoryId,Store,Brand,Description,Size,onHand_start,onHand_end,TotalSales,AvgPrice,PurchasePrice,Quantity,LeadTime,Turnover
+TEST_001,1,1001,Premium Vodka,750mL,50,30,20,25.99,15.99,100,5,2.5
+TEST_002,1,1002,Scotch Whisky,1L,75,45,30,35.99,20.99,150,7,3.0
+TEST_003,1,1003,Gin,500mL,40,25,15,18.99,12.99,80,4,2.0
+TEST_004,1,1004,Bourbon,1.75L,60,35,25,45.99,30.99,120,6,2.8
+TEST_005,1,1005,Rum,375mL,30,20,10,12.99,8.99,60,3,1.8 
