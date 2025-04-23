@@ -44,7 +44,7 @@ pip install -r requirements.txt
 2. **Run the backend server using FastAPI**
 
 ```bash
-uvicorn app:app --reload
+uvicorn main:app --reload
 ```
 
 ---
