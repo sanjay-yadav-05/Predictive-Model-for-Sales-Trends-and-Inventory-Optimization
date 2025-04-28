@@ -54,7 +54,7 @@ export function InventoryVisualizations({ recommendations }: InventoryVisualizat
       name: item.InventoryId,
       description: item.Description,
       currentStock: item.Current_Stock,
-      safetyStock: item.Safety_Stock,
+      predictedDemand: item.Predicted_Demand,
     }))
   }, [limitedRecommendations])
 
@@ -167,8 +167,8 @@ export function InventoryVisualizations({ recommendations }: InventoryVisualizat
 
       <Card>
         <CardHeader>
-          <CardTitle>Current Stock vs Safety Stock</CardTitle>
-          <CardDescription>Comparison of current stock levels to safety stock </CardDescription>
+          <CardTitle>Current Stock vs predicted Demand</CardTitle>
+          <CardDescription>Comparison of current stock levels to predicted Demand </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-[350px]">
@@ -186,7 +186,7 @@ export function InventoryVisualizations({ recommendations }: InventoryVisualizat
                 <XAxis dataKey="name" angle={-45} textAnchor="end" height={70} />
                 <YAxis />
                 <Tooltip
-                  formatter={(value, name) => [value, name === "currentStock" ? "Current Stock" : "Safety Stock"]}
+                  formatter={(value, name) => [value, name === "currentStock" ? "Current Stock" : "predicted Demand"]}
                   labelFormatter={(label) => {
                     const item = stockComparisonData.find((item) => item.name === label)
                     return `${label}: ${item?.description}`
@@ -194,7 +194,7 @@ export function InventoryVisualizations({ recommendations }: InventoryVisualizat
                 />
                 <Legend />
                 <Bar dataKey="currentStock" name="Current Stock" fill="#8884d8" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="safetyStock" name="Safety Stock" fill="#82ca9d" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="predictedDemand" name="predicted Demand" fill="#82ca9d" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
