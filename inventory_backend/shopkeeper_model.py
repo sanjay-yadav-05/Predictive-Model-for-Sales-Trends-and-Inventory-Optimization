@@ -27,8 +27,8 @@ class ShopkeeperInventoryModel:
         }).reset_index()
         
         sales_metrics.columns = ['InventoryId', 'TotalSalesQuantity', 'AvgSalesQuantity', 
-                                 'StdSalesQuantity', 'AvgSalesPrice', 'StdSalesPrice', 
-                                 'TotalSalesDollars']
+                                    'StdSalesQuantity', 'AvgSalesPrice', 'StdSalesPrice', 
+                                    'TotalSalesDollars']
         
         merged_data = pd.merge(final_data, sales_metrics, on='InventoryId', how='left')
         merged_data['DaysOfStock'] = np.where(
